@@ -2,6 +2,7 @@ class Library{
     constructor(name){
         this.name = name;
         this.books = [];
+        this.employees =[];
     }
     registerBooks(book){
         if(book instanceof Book)
@@ -51,5 +52,25 @@ class Library{
             }
         }
         return notAvailableBooks;
+    }
+    addEmployee(id,firstName, lastName, phone, email){
+        let newEmployee = new Employee(id,firstName, lastName, phone, email);
+        this.employees.push(newEmployee);
+    }
+    editEmployee(id,field,value){
+        for(let empl of this.employees){
+            if(empl.id === id){
+                empl[field] = value;
+                break;
+            }
+        }
+    }
+    deleteEmployee(id){
+        for(let empl of this.employees){
+            if(empl.id === id){
+                this.employees.splice(this.employees.indexOf(empl),1);
+                break;
+            }
+        }
     }
 }
