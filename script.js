@@ -57,15 +57,16 @@ let authors = [
     "Franz Kafka"
 ];
 
-function Name(number){
-    this.name = "";
-    for(let i=0;i< number;i++){
-        let k = Math.random() * (122 - 97) + 97;
-        if(i===0){this.name +=(String.fromCharCode(k)).toUpperCase();}
-        else{this.name +=(String.fromCharCode(k));}
-    }
+// function Name(number){
+//     this.name = "";
+//     for(let i=0;i< number;i++){
+//         let k = Math.random() * (122 - 97) + 97;
+//         if(i===0){this.name +=(String.fromCharCode(k)).toUpperCase();}
+//         else{this.name +=(String.fromCharCode(k));}
+//     }
+//
+// }
 
-}
 let author = authors[Math.floor(Math.random()*authors.length)];
 let myBook = new Book(1,"WIlliams",author,652);
 let myLib = new Library("Khnko Aper");
@@ -73,8 +74,7 @@ myLib.registerBooks(myBook);
 console.log(myLib);
 console.log(myLib.getAllAuthors());
 console.log(myLib.authorReport());
-let name = new Name(2);
-console.log(name.name);
+
 
 
 
