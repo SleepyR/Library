@@ -1,4 +1,4 @@
-class Employee{
+class User{
     constructor(id,firstName, lastName, phone, email){
         this.id = id;
         this.name = firstName;
