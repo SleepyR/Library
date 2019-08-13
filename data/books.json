@@ -1,0 +1,110 @@
+[
+  {
+    "id": 1,
+    "title": "In Search of Lost Time",
+    "authors":[
+      "Marcel Proust"
+    ],
+    "genres": [
+
+    ],
+    "status": "Available",
+    "description": " Swann&#39;s Way, the first part of A la recherche de temps perdu, Marcel Proust&#39;s seven-part cycle, was published in 1913. In it, Proust introduces the themes that run through the entire work. "
+    
+  },
+  {
+    "id": 2,
+    "title": "Don Quixote",
+    "authors": ["Miguel de Cervantes"],
+    "genres": [
+
+    ],
+    "status": "Available",
+    "description": "Alonso Quixano, a retired country gentleman in his fifties, lives in an unnamed section of La Mancha with his niece and a housekeeper. He has become obsessed with books of chivalry."
+  },
+  {
+    "id": 3,
+    "title": "Don Quixote",
+    "authors": ["Miguel de Cervantes"],
+    "genres": [
+
+    ],
+    "status": "Available",
+    "description":"Ulysses chronicles the passage of Leopold Bloom through Dublin during an ordinary day, June 16, 1904. The title parallels and alludes to Odysseus (Latinised into Ulysses)."
+  },
+  {
+    "id": 4,
+    "title": "Ulysses",
+    "authors": ["James Joyce"],
+    "genres": [
+
+    ],
+    "status": "Available",
+    "description":
+  },
+  {
+    "id": 5,
+    "title": "The Great Gatsby",
+    "authors": ["F. Scott Fitzgerald"],
+    "genres": [
+
+    ],
+    "status": "Available",
+    "description":
+  },
+  {
+    "id": 6,
+    "title": "Moby Dick",
+    "authors": ["Herman Melville"],
+    "genres": [
+
+    ],
+    "status": "Available",
+    "description":
+  },
+  {
+    "id": 7,
+    "title": "Hamlet",
+    "authors": [ "William Shakespeare"],
+    "genres": [
+
+    ],
+    "status": "Available",
+    "description":
+  },
+  {
+    "id": 8,
+    "title": "War and Peace",
+    "authors":[ "Leo Tolstoy"],
+    "genres": [
+
+    ],
+    "status": "Available",
+    "description":
+  },
+  {
+    "id": 9,
+    "title": "The Odyssey",
+    "authors": [ "Homer" ],
+    "genres": [
+
+    ],
+    "status": "Available",
+    "description":
+  },
+  {
+    "id": 10,
+    "title": "One Hundred Years of Solitude",
+    "authors":[ "Gabriel Garcia Marquez" ],
+    "genres": [
+
+    ],
+    "status": "Available",
+    "description":
+  }
+]
+
+
+
+
+
