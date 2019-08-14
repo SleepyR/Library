@@ -1,0 +1,55 @@
+body{
+    background-image: url("images/login.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% ;
+}
+.signIn{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 390px;
+    height: 500px;
+
+}
+.form{
+    padding: 15px;
+    height: auto;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: rgba(255, 113, 63, 0.45);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.inputVal,.submit{
+    width: 100%;
+    padding: 10px;
+    position: relative;
+}
+.inputVal input{
+    width: 100%;
+    border-radius: 10px;
+    padding: 5px;
+
+}
+.submit input {
+    width: 100%;
+    font-size: 20px;
+    color: #f4fff3;
+    border-radius: 10px;
+    background: #d41872;
+    background: -webkit-linear-gradient(left, #ffa979, #b23c24, #fffa82);
+}
+.submit input:hover{
+    background-color: #ffa979;
+}
+.signUp a{
+    color: white;
+}
+.label{
+    top:50%;
+    font-size: 30px;
+    color:white;
+}

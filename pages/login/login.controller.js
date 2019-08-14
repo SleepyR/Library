@@ -11,7 +11,6 @@ window.onload = function () {
 function login() {
     let username = document.getElementById('username').value;
     let password = document.getElementById('password').value;
-
     try {
         let info = window.lms.authService.login(username, password);
         console.log(info);

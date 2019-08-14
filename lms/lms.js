@@ -4,8 +4,6 @@ class LMS {
         this._authService = new AuthService(new UmService(), new PermissionService(), new RoleService());
 
     }
-
-
     get authService() {
         return this._authService;
     }

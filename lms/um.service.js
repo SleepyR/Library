@@ -1,8 +1,7 @@
 class UmService {
     constructor() {
         this.usernameToUser = new Map();
-
-        // this.usernameToUser.set("superman", {username: "superman", password: "foobar"}); // TEMPORARY LINE
+        this.usernameToUser.set("superman", {username: "superman", password: "foobar"}); // TEMPORARY LINE
     }
 
 

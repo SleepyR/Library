@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="profile.style.css">
+    <script src="profile.controller.js"></script>
+</head>
+<body>
+<ul class="sidebar">
+    <li onclick="showBooks()">Books</li>
+    <li>Staff</li>
+    <li>About</li>
+</ul>
+
+<input type="checkbox" id="sidebar-btn" class="sidebar-btn" checked/>
+<label for="sidebar-btn"></label>
+
+<div id="content">
+    <nav class="navbar">
+        <h1 class="site_header">LIBRARY</h1>
+        <form class="search" action="/items/search" method="get" role="search">
+            <input  type="search" aria-label="Search" placeholder="Search" name="search_terms" >
+        </form>
+    </nav>
+
+    <div id="table">
+
+    </div>
+</div>
+</body>
+</html>

@@ -10,7 +10,7 @@ class  RoleService {
         this.roles.set("Admin", new Role("Admin"));
 
         for(let R of this.roles) {
-            let name = R.roleName
+            let name = R.roleName;
             switch(name)  {
                 case "Librarian": {
                     R.PermissionService.getBook = true;

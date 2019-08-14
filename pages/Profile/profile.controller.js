@@ -1,5 +1,4 @@
-
-function createTable() {
+function showBooks() {
     let request = new XMLHttpRequest();
     request.open("GET", "../../data/books.json", false);
     request.send(null);

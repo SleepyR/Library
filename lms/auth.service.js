@@ -13,9 +13,10 @@ class AuthService {
             throw new Error(`user with ${username} not found`);
         }
 
+        console.log(user);
+
         if(user.password === EncryptionHelper.encrypt(password)) {
             let userPermissions = this.roleService.getPermissions(user.role);
-
             sessionStorage.setItem('authInfo', JSON.stringify({
                 user: user,
                 permissions: userPermissions
