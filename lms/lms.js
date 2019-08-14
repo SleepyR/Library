@@ -1,8 +1,8 @@
 class LMS {
 
     constructor() {
-        this._authService = new AuthService(new UmService(), new PermissionService());
-        this._roleService = new RoleService();
+        this._authService = new AuthService(new UmService(), new PermissionService(), new RoleService());
+
     }
 
 

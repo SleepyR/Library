@@ -3,5 +3,4 @@ class Role {
         this.roleName = roleName;
         this.PermissionService = new PermissionService();
     }
-
 }

@@ -58,4 +58,10 @@ class  RoleService {
 
         }
     }
+
+
+    getPermissions(user) {
+        return this.roles.get(user).PermissionService;
+    }
+
 }

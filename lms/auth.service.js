@@ -1,8 +1,9 @@
 class AuthService {
 
-    constructor(umService, permissionService) {
+    constructor(umService, permissionService, RoleService) {
         this.umService = umService;
         this.permissionService = permissionService;
+        this.roleService = RoleService;
     }
 
     login(username, password) {
@@ -13,7 +14,7 @@ class AuthService {
         }
 
         if(user.password === EncryptionHelper.encrypt(password)) {
-            let userPermissions = this.permissionService.getPermissions(user.role);
+            let userPermissions = this.roleService.getPermissions(user.role);
 
             sessionStorage.setItem('authInfo', JSON.stringify({
                 user: user,
