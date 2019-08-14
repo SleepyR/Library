@@ -17,6 +17,7 @@ class AuthService {
 
             sessionStorage.setItem('authInfo', {
                 user: user,
+                role: role,
                 permissions: userPermissions
             })
         } else {
