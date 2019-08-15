@@ -8,4 +8,5 @@ class User{
         this.password = password;
         this.username = username;
     }
+
 }

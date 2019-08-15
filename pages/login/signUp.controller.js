@@ -3,16 +3,20 @@ window.onload = function () {
     console.log('sdfs');
 
     if (window.lms.authService.isLogined()) {
-        window.location = '../../../Profile/profile.html'
+        window.location = 'some.html'
     }
 };
 
 
-function login() {
+function signUp() {
+    let name = document.getElementById("name").value;
+    let surname = document.getElementById("surname").value;
     let username = document.getElementById('username').value;
     let password = document.getElementById('password').value;
+    let phoneNumber = document.getElementById("phone").value;
+    let email = document.getElementById("email").value;
     try {
-        let info = window.lms.authService.login(username, password);
+        let info = window.lms.authService.signUp(name,surname,phoneNumber,email,username, password);
         console.log(info);
     } catch (e) {
         console.log(e);

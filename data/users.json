@@ -1,1 +1,12 @@
-[]
+[
+  {
+    "firstName": "Admin",
+    "lastName": "Admin",
+    "phone": "admin000",
+    "email": "admin@admin.com",
+    "role": "admin",
+    "username": "admin",
+    "password": "admin"
+
+  }
+]

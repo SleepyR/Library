@@ -1,16 +1,15 @@
 class UmService {
-    constructor() {
-        this.usernameToUser = new Map();
-        this.usernameToUser.set("superman", {username: "superman", password: "foobar"}); // TEMPORARY LINE
-    }
-
 
     getUserByUsername(username) {
-        return this.usernameToUser.get(username);
+        let json = localStorage.getItem(username);
+        let myobj = JSON.parse(json);
+        return myobj;
     }
 
 
-    setUser(firstName, lastName, phone, email, role, username) {
-        this.usernameToUser.set(username, new User(firstName, lastName, phone, email,role, password, username));
+    setUser(firstName, lastName, phone, email, role, username,password) {
+        let user = new User(firstName, lastName, phone, email,role, password, username);
+        let json = JSON.stringify(user);
+        localStorage.setItem(user.username,json);
     }
 }
