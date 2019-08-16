@@ -74,7 +74,7 @@ th,table tr:nth-of-type(2n) td {border-right:1px solid #fff;}
 td {border-right:1px solid #f0f0f0;}
 .size-960 .line,.size-1140 .line,.size-1280 .line,.size-1520 .line {
   margin:0 auto;
-  padding:40px 0.625rem;
+  padding:0px 0.625rem;
 }
 .grid {
   display:grid;

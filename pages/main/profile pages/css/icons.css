@@ -207,7 +207,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-.icon2x {font-size: 2rem;}
+.icon2x {font-size: 4rem;}
 .icon3x {font-size: 3rem;}
 
 .icon-cloud:before { content: "\2601"; }
