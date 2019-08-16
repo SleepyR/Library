@@ -12,9 +12,12 @@ window.onload = ()=>{
     showLabel("Books");
 };
 function showLabel(label) {
-    let div = document.getElementById("name");
-    div.innerHTML = label;
-    let buttons = document.getElementById("buttons");
+    let div = document.getElementById("label");
+    div.innerHTML = "";
+    let name = document.createElement("div");
+    name.innerHTML = label;
+    div.appendChild(name);
+    let buttons = document.createElement("div");
     let button1 = document.createElement("div");
     let button2 = document.createElement("div");
     let button3 = document.createElement("div");
