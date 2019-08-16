@@ -1,10 +1,6 @@
 window.onload = function () {
     window.lms = new LMS();
     console.log('sdfs');
-
-    if (window.lms.authService.isLogined()) {
-        window.location = '../../../Profile/profile.html'
-    }
 };
 
 
@@ -13,6 +9,7 @@ function login() {
     let password = document.getElementById('password').value;
     try {
         let info = window.lms.authService.login(username, password);
+        window.location = '../../../Profile/profile pages/gallery.html';
         console.log(info);
     } catch (e) {
         console.log(e);

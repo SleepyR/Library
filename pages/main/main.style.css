@@ -21,6 +21,7 @@
 }
 #table{
     background-color: antiquewhite;
+    padding: 100px 10px 10px 10px;
 }
 #table td{
     padding: 15px;
