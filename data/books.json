@@ -1,5 +1,4 @@
-{
-  "books": [
+[
     {
       "id": 1,
       "title": "In Search of Lost Time",
@@ -131,6 +130,5 @@
       "img": "https://images-na.ssl-images-amazon.com/images/I/51tkcSAhSDL._SL160_.jpg"
     }
   ]
-}
 
 

@@ -9,6 +9,7 @@ window.onload = function () {
 
 
 function signUp() {
+    debugger;
     let name = document.getElementById("name").value;
     let surname = document.getElementById("surname").value;
     let username = document.getElementById('username').value;
@@ -17,7 +18,7 @@ function signUp() {
     let email = document.getElementById("email").value;
     try {
         let info = window.lms.authService.signUp(name,surname,phoneNumber,email,username, password);
-        console.log(info);
+        window.location = "../../../login/Login_v3/Login_v3/index.html";
     } catch (e) {
         console.log(e);
         document.getElementById('error-message').innerText = e.message;

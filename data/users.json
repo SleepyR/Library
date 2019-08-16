@@ -1,5 +1,5 @@
-[
-  {
+{
+  "admin": {
     "firstName": "Admin",
     "lastName": "Admin",
     "phone": "admin000",
@@ -7,6 +7,5 @@
     "role": "admin",
     "username": "admin",
     "password": "admin"
-
   }
-]
+}

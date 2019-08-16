@@ -1,21 +1,28 @@
 class UmService {
 
     getUserByUsername(username) {
-        let json = localStorage.getItem(username);
-        let myobj = JSON.parse(json);
+        let json = localStorage.getItem("users");
+        console.log(json);
+        let myobj = JSON.parse(json)[username];
         return myobj;
     }
 
 
-    setUser(firstName, lastName, phone, email, role, username,password) {
-        let user = new User(firstName, lastName, phone, email,role, password, username);
-        let json = JSON.stringify(user);
-        localStorage.setItem(user.username,json);
+    setUser(firstName, lastName, phone, email, role,username,password) {
+        let user = new User(firstName, lastName, phone, email,role, username,password);
+        console.log( localStorage.getItem("users"));
+        let bla = JSON.parse(localStorage.getItem("users"));
+        console.log(bla);
+        console.log(user);
+        bla[username]= user;
+        localStorage.setItem("users", JSON.stringify(bla));
+        console.log( (localStorage.getItem("users")));
+
     }
 }
 
 //
-// localStorage.setItem("books",JSON.stringify([
+// localStorage.setItem("books",JSON.stringify({
 //     {
 //         "id": 1,
 //         "title": "In Search of Lost Time",

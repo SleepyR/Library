@@ -7,6 +7,7 @@ class AuthService {
     }
 
     login(username, password) {
+        debugger;
         let user = this.umService.getUserByUsername(username);
 
         if(user == null) {
@@ -35,8 +36,8 @@ class AuthService {
         return sessionStorage.getItem('authInfo') != null;
     }
 
-    signUp(firstName, lastName, phone, email, password, username) { // TODO needs to be changed
+    signUp(firstName, lastName, phone, email,username, password) { // TODO needs to be changed
         password = EncryptionHelper.encrypt(password);
-        this.umService.setUser(firstName, lastName, phone, email, "Patron", password, username);
+        this.umService.setUser(firstName, lastName, phone, email, "Patron", username,password);
     }
 }
