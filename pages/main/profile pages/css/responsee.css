@@ -117,7 +117,7 @@ mark {
   padding: 0.125rem 0.3125rem;
 }
 .size-960 .line,.size-960 .grid {max-width:59.75rem;}
-.size-1140 .line,.size-1140 .grid {max-width:71rem;}
+.size-1140 .line,.size-1140 .grid {max-width:120rem;}
 .size-1280 .line,.size-1280 .grid {max-width:80rem;}
 .size-1520 .line,.size-1520 .grid {max-width:95rem;}
 .grid.full {
@@ -584,7 +584,7 @@ nav.breadcrumb-nav ul li:last-child:after {content:"";}
 .l-7, .grid .l-7.center {width:58.3333%;}
 .l-8, .grid .l-8.center {width:66.6666%;}
 .l-9, .grid .l-9.center {width:75%;}
-.l-10, .grid .l-10.center {width:83.3333%;}
+.l-10, .grid .l-10.center {width:33%;}
 .l-11, .grid .l-11.center {width:91.6666%;}
 .l-12, .grid .l-12.center {width:100%}
 .grid .l-1 {grid-column:span 1;}
