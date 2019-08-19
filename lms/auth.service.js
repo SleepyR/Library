@@ -1,9 +1,10 @@
 class AuthService {
 
-    constructor(umService, permissionService, RoleService) {
+    constructor(umService, permissionService, RoleService, BookService) {
         this.umService = umService;
         this.permissionService = permissionService;
         this.roleService = RoleService;
+        this.bookService = BookService;
     }
 
     login(username, password) {

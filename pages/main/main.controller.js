@@ -10,6 +10,14 @@ window.onload = ()=>{
         logOut.onclick = window.lms.authService.logout;
     }
     showLabel("Books");
+    var btn = document.getElementById("addBook");
+    var modal = document.getElementById("myModal");
+    btn.onclick = () => { modal.style.display = "block"; }
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
 };
 function showLabel(label) {
     let div = document.getElementById("label");
@@ -35,6 +43,7 @@ function showLabel(label) {
             break;
         case "Books":
             button1.setAttribute("class","button border-radius background-primary text-size-12 text-white text-strong");
+            button1.setAttribute("id",  "addBook");
             button1.innerHTML = "ADD BOOK";
             button2.setAttribute("class","button border-radius background-primary text-size-12 text-white text-strong");
             button2.innerHTML = "EDIT BOOK";
@@ -112,3 +121,6 @@ function createBooks() {
         document.getElementById("container").appendChild(div1);
     }
 }
+
+
+

@@ -1,10 +1,11 @@
 class Book {
-    constructor(id,title,author,pages){
-        this.id = id;
+    constructor(img, title, authors, genres, description){
+        this.img = img;
         this.name = title;
-        this.author = author;
-        this.pageCount = pages;
-        this.isAvalable = true;
+        this.authors = authors;
+        this.genres = genres;
+        this.status = true;
+        this.description = description;
     }
 
 }
