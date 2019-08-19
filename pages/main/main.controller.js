@@ -10,12 +10,12 @@ window.onload = ()=>{
         logOut.onclick = window.lms.authService.logout;
     }
     showLabel("Books");
-    var btn = document.getElementById("addBook");
-    var modal = document.getElementById("myModal");
-    btn.onclick = () => { modal.style.display = "block"; }
+    var modal1 = document.getElementById("BookModal");
+    var modal2 = document.getElementById("UserModal");
     window.onclick = function(event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
+        if (event.target == modal1 || event.target == modal2) {
+            modal1.style.display = "none";
+            modal2.style.display = "none";
         }
     }
 };
@@ -40,10 +40,11 @@ function showLabel(label) {
             buttons.appendChild(button3);
             buttons.appendChild(button2);
             buttons.appendChild(button1);
+            var modal2 = document.getElementById("UserModal");
+            button1.onclick = () => { modal2.style.display = "block"; }
             break;
         case "Books":
             button1.setAttribute("class","button border-radius background-primary text-size-12 text-white text-strong");
-            button1.setAttribute("id",  "addBook");
             button1.innerHTML = "ADD BOOK";
             button2.setAttribute("class","button border-radius background-primary text-size-12 text-white text-strong");
             button2.innerHTML = "EDIT BOOK";
@@ -52,6 +53,8 @@ function showLabel(label) {
             buttons.appendChild(button3);
             buttons.appendChild(button2);
             buttons.appendChild(button1);
+            var modal1 = document.getElementById("BookModal");
+            button1.onclick = () => { modal1.style.display = "block"; }
             break;
     }
     document.getElementById("label").appendChild(buttons);

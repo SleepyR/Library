@@ -17,6 +17,7 @@
     <script type="text/javascript" src="js/jquery-ui.min.js"></script>    
     <script src="../main.controller.js"></script>
     <script src="../book.controller.js"></script>
+    <script src="../um.controller.js"></script>
     <script src="../../../lms/um.service.js"></script>
     <script src="../../../lms/role.js"></script>
     <script src="../../../lms/User.js"></script>
@@ -74,7 +75,7 @@
         </div>
       </article>
     </main>
-    <div id="myModal" class="modal">
+    <div id="BookModal" class="modal">
       <div class="modal-content">
         <form>
           <div class="content">
@@ -101,6 +102,38 @@
         </form>
       </div>
     </div>
+
+    <div id="UserModal" class="modal">
+      <div class="modal-content">
+        <form>
+          <div class="content">
+            <span class="label">ADD USER</span>
+            <div class="inputVal">
+              <input id="name" type="text" name="username" placeholder="name">
+            </div>
+            <div class="inputVal">
+              <input id="surname" type="text" name="username" placeholder="surname">
+            </div>
+            <div class="inputVal">
+              <input id="username" type="text" name="username" placeholder="username">
+            </div>
+            <div class="inputVal">
+              <input id="phone" type="text" name="password" placeholder="phone">
+            </div>
+            <div class="inputVal">
+              <input id="email" type="text" name="password" placeholder="email">
+            </div>
+            <div class="inputVal">
+              <input id="password" type="password" name="password" placeholder="password">
+            </div>
+            <div class="submit" onclick="addUser()">
+              <input type="button" value="Add" >
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
     <script type="text/javascript" src="js/responsee.js"></script>
     <script type="text/javascript" src="owl-carousel/owl.carousel.js"></script>
     <script type="text/javascript" src="js/template-scripts.js"></script>

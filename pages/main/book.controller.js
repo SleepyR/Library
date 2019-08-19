@@ -6,7 +6,7 @@ function addBook() {
     let description = document.getElementById('description').value;
     try {
         let info = window.lms.authService.bookService.addBook(img, title, authors, genres, description);
-        var modal = document.getElementById("myModal");
+        var modal = document.getElementById("BookModal");
         modal.style.display = "none";
         location.reload();
         console.log(info);
