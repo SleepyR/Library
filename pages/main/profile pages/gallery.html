@@ -22,7 +22,7 @@
     <script src="../../../lms/role.js"></script>
     <script src="../../../lms/User.js"></script>
     <script src="../../../lms/Book.js"></script>
-    <script src="../../../lms/permission.service.js"></script>
+    <script src="../../../lms/permissions.js"></script>
     <script src="../../../lms/auth.service.js"></script>
     <script src="../../../lms/book.service.js"></script>
     <script src="../../../lms/encryption.helper.js"></script>
@@ -116,6 +116,14 @@
             </div>
             <div class="inputVal">
               <input id="username" type="text" name="username" placeholder="username">
+            </div>
+            Role
+            <div class="inputVal">
+              <select id="role" placeholder="role">
+                <option value="Admin">Admin</option>
+                <option value="Librarian">Librarian</option>
+                <option value="Patron">Patron</option>
+              </select>
             </div>
             <div class="inputVal">
               <input id="phone" type="text" name="password" placeholder="phone">

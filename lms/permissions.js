@@ -1,4 +1,4 @@
-class PermissionService {
+class Permissions {
 
     constructor () {
         this.getBook = false;
@@ -9,9 +9,9 @@ class PermissionService {
         this.addBook = false;
         this.editBook = false;
         this.deleteBook = false;
-        this.addLibrarian = false;
-        this.editLibrarian = false;
-        this.deleteLibrarian = false;
+        this.addUser = false;
+        this.editUser = false;
+        this.deleteUser = false;
     }
 
 }

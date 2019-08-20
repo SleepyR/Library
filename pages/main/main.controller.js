@@ -8,8 +8,8 @@ window.onload = ()=>{
         logOut.innerHTML = "LOG OUT";
         logOut.href = "gallery.html";
         logOut.onclick = window.lms.authService.logout;
+        showLabel("Books");
     }
-    showLabel("Books");
     var modal1 = document.getElementById("BookModal");
     var modal2 = document.getElementById("UserModal");
     window.onclick = function(event) {
@@ -29,32 +29,45 @@ function showLabel(label) {
     let button1 = document.createElement("div");
     let button2 = document.createElement("div");
     let button3 = document.createElement("div");
+    let user = JSON.parse(sessionStorage.getItem('authInfo'));
     switch (label) {
         case "Users":
-            button1.setAttribute("class","button border-radius background-primary text-size-12 text-white text-strong");
-            button1.innerHTML = "ADD USER";
-            button2.setAttribute("class","button border-radius background-primary text-size-12 text-white text-strong");
-            button2.innerHTML = "EDIT USER";
-            button3.setAttribute("class","button border-radius background-primary text-size-12 text-white text-strong");
-            button3.innerHTML = "DELETE USER";
-            buttons.appendChild(button3);
-            buttons.appendChild(button2);
-            buttons.appendChild(button1);
-            var modal2 = document.getElementById("UserModal");
-            button1.onclick = () => { modal2.style.display = "block"; }
+            if(user.permissions["deleteUser"]){
+                button3.setAttribute("class","button border-radius background-primary text-size-12 text-white text-strong");
+                button3.innerHTML = "DELETE USER";
+                buttons.appendChild(button3);
+            }
+            if(user.permissions["editUser"]){
+                button2.setAttribute("class","button border-radius background-primary text-size-12 text-white text-strong");
+                button2.innerHTML = "EDIT USER";
+                buttons.appendChild(button2);
+            }
+            if(user.permissions["addUser"]){
+                button1.setAttribute("class","button border-radius background-primary text-size-12 text-white text-strong");
+                button1.innerHTML = "ADD USER";
+                var modal2 = document.getElementById("UserModal");
+                button1.onclick = () => { modal2.style.display = "block"; }
+                buttons.appendChild(button1);
+            }
             break;
         case "Books":
-            button1.setAttribute("class","button border-radius background-primary text-size-12 text-white text-strong");
-            button1.innerHTML = "ADD BOOK";
-            button2.setAttribute("class","button border-radius background-primary text-size-12 text-white text-strong");
-            button2.innerHTML = "EDIT BOOK";
-            button3.setAttribute("class","button border-radius background-primary text-size-12 text-white text-strong");
-            button3.innerHTML = "DELETE BOOK";
-            buttons.appendChild(button3);
-            buttons.appendChild(button2);
-            buttons.appendChild(button1);
-            var modal1 = document.getElementById("BookModal");
-            button1.onclick = () => { modal1.style.display = "block"; }
+            if(user.permissions["deleteBook"]){
+                button3.setAttribute("class","button border-radius background-primary text-size-12 text-white text-strong");
+                button3.innerHTML = "DELETE BOOK";
+                buttons.appendChild(button3);
+            }
+            if(user.permissions["editBook"]){
+                button2.setAttribute("class","button border-radius background-primary text-size-12 text-white text-strong");
+                button2.innerHTML = "EDIT BOOK";
+                buttons.appendChild(button2);
+            }
+            if(user.permissions["addBook"]){
+                button1.setAttribute("class","button border-radius background-primary text-size-12 text-white text-strong");
+                button1.innerHTML = "ADD BOOK";
+                var modal1 = document.getElementById("BookModal");
+                button1.onclick = () => { modal1.style.display = "block"; }
+                buttons.appendChild(button1);
+            }
             break;
     }
     document.getElementById("label").appendChild(buttons);

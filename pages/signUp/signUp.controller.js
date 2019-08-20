@@ -16,7 +16,7 @@ function signUp() {
     let phoneNumber = document.getElementById("phone").value;
     let email = document.getElementById("email").value;
     try {
-        let info = window.lms.authService.signUp(name,surname,phoneNumber,email,username, password);
+        let info = window.lms.authService.signUp(name,surname,phoneNumber,email, "Patron", username, password);
         window.location = "../../../login/Login_v3/Login_v3/index.html";
     } catch (e) {
         console.log(e);
