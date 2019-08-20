@@ -38,6 +38,6 @@ class AuthService {
 
     signUp(firstName, lastName, phone, email, role, username, password) { // TODO needs to be changed
         password = EncryptionHelper.encrypt(password);
-        this.umService.setUser(firstName, lastName, phone, email, role, username,password);
+        this.umService.setUser(firstName, lastName, phone, email, role, username, password);
     }
 }
