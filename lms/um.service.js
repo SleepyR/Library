@@ -6,9 +6,9 @@ class UmService {
     findUser(username) {
         let users = localStorage.getItem("users");
         let tempArr = JSON.parse(users);
-        for (let user of tempArr) {
-            if(user.username == username) {
-                return user;
+        for (let user in tempArr) {
+            if(user === username) {
+                return tempArr[user];
             }
         }
     }
@@ -16,8 +16,8 @@ class UmService {
     isAlreadyInThesystem(username) {
         let users = localStorage.getItem("users");
         let tempArr = JSON.parse(users);
-        for (let user of tempArr) {
-            if(user.username == username) {
+        for (let user in tempArr) {
+            if(user === username) {
                 return true;
             }
         }
@@ -27,7 +27,6 @@ class UmService {
     getUserByUsername(username) {
         debugger;
         let json = localStorage.getItem("users");
-        console.log(json);
         let myobj = JSON.parse(json);
 
         let user = this.findUser(username);
