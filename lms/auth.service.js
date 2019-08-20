@@ -1,13 +1,13 @@
 class AuthService {
 
-    constructor(umService, permissionService, RoleService) {
+    constructor(umService, Permissions, RoleService, BookService) {
         this.umService = umService;
-        this.permissionService = permissionService;
+        this.permissions = Permissions;
         this.roleService = RoleService;
+        this.bookService = BookService;
     }
 
     login(username, password) {
-        debugger;
         let user = this.umService.getUserByUsername(username);
 
         if(user == null) {
@@ -36,8 +36,8 @@ class AuthService {
         return sessionStorage.getItem('authInfo') != null;
     }
 
-    signUp(firstName, lastName, phone, email,username, password) { // TODO needs to be changed
+    signUp(firstName, lastName, phone, email, role, username, password) { // TODO needs to be changed
         password = EncryptionHelper.encrypt(password);
-        this.umService.setUser(firstName, lastName, phone, email, "Patron", username,password);
+        this.umService.setUser(firstName, lastName, phone, email, role, username,password);
     }
 }
