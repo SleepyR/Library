@@ -578,7 +578,8 @@ nav.breadcrumb-nav ul li:last-child:after {content:"";}
 .l-2, .grid .l-2.center {width:16.6666%;}
 .l-five {width:20%;}
 .l-3, .grid .l-3.center {width:16.6666%;}
-.l-4, .grid .l-4.center {width:33.3333%;}
+.l-4, .grid .l-4.center {    width: max-content;
+}
 .l-5, .grid .l-5.center {width:41.6666%;}
 .l-6, .grid .l-6.center {width:50%;}
 .l-7, .grid .l-7.center {width:58.3333%;}
@@ -794,10 +795,13 @@ nav.breadcrumb-nav ul li:last-child:after {content:"";}
   .l-1, .grid .l-1.center {width:8.3333%;}
   .l-2, .grid .l-2.center {width:16.6666%;}
   .l-five {width:20%;}
-  .l-3, .grid .l-3.center {width:16.6666%;}
-  .l-4, .grid .l-4.center {width:33.3333%;}
-  .l-5, .grid .l-5.center {width:41.6666%;}
-  .l-6, .grid .l-6.center {width:50%;}
+  .l-3, .grid .l-3.center {    width: max-content;
+  }
+  .l-4, .grid .l-4.center { width: max-content;}
+  .l-5, .grid .l-5.center {    width: max-content;
+  }
+  .l-6, .grid .l-6.center {    width: max-content;
+  }
   .l-7, .grid .l-7.center {width:58.3333%;}
   .l-8, .grid .l-8.center {width:66.6666%;}
   .l-9, .grid .l-9.center {width:75%;}

@@ -98,7 +98,7 @@ function createStaff() {
         name.innerHTML = users[user]["name"] + " "+ users[user]["surname"];
         let info = document.createElement("p");
         info.setAttribute("class","margin-bottom-30");
-        info.innerText = "Email: " + users[user]["email"] + "\n"+"Phone: "+users[user]["phoneNumber"];
+        info.innerText = users[user]["role"]+"\n"+"Email: " + users[user]["email"] + "\n"+"Phone: "+users[user]["phoneNumber"] ;
         let button = document.createElement("div");
         button.innerHTML = "EDIT USER";
         button.setAttribute("class","button border-radius background-primary text-size-12 text-white text-strong");
@@ -110,6 +110,22 @@ function createStaff() {
         document.getElementById("staff").appendChild(div1);
     }
 }
+function showPopUp(book) {
+    let pdiv = document.createElement("div");
+    pdiv.setAttribute("class","popup");
+    let popup = document.createElement("div");
+    popup.setAttribute("class","content");
+    popup.innerText = book["id"]+"."+book["title"]+"\n Author(s): "+book["authors"]+"\n Description: "+book["description"];
+    pdiv.appendChild(popup);
+    let closeA =document.createElement("a");
+    closeA.setAttribute("class","close");
+    closeA.href = "#";
+    closeA.innerHTML = "&times";
+    pdiv.appendChild(closeA);
+    let pop = document.getElementById("popup1");
+    pop.innerHTML = '';
+    pop.appendChild(pdiv);
+}
 function createBooks() {
     div = document.getElementById("label");
     div.innerHTML = "Books";
@@ -117,6 +133,10 @@ function createBooks() {
     for(let book of my_JSON_object){
         let div1 = document.createElement("div");
         div1.setAttribute("class","s-12 m-6 l-3");
+        let a = document.createElement("a");
+        a.setAttribute("class","description");
+        a.href = "#popup1";
+        a.addEventListener("click", function() { showPopUp(book); } );
         let div2 = document.createElement("div");
         div2.setAttribute("class","image-with-hover-overlay image-hover-zoom margin-bottom");
         let div3 = document.createElement("div");
@@ -133,7 +153,8 @@ function createBooks() {
         div3.appendChild(div4);
         div2.appendChild(div3);
         div2.appendChild(img);
-        div1.appendChild(div2);
+        a.appendChild(div2);
+        div1.appendChild(a);
         document.getElementById("container").appendChild(div1);
     }
 }
